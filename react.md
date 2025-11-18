@@ -116,3 +116,26 @@ function MyButton({ count, onClick }) {
   );
 }
 ```
+
+当你点击按钮时，onClick 处理程序会启动。每个按钮的 onClick prop 会被设置为 MyApp 内的 handleClick 函数，所以函数内的代码会被执行。该代码会调用 setCount(count + 1)，使得 state 变量 count 递增。新的 count 值会被作为 prop 传递给每个按钮，因此它们每次展示的都是最新的值。这被称为“状态提升”。通过向上移动 state，我们实现了在组件间共享它。
+
+
+```javascript
+import { useState } from 'react';
+
+export default function MyApp() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>共同更新的计数器</h1>
+      <MyButton count={count} onClick={handleClick} />
+      <MyButton count={count} onClick={handleClick} />
+    </div>
+  );
+}
+```
