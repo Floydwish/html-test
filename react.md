@@ -99,3 +99,13 @@ function MyButton() {
 使用这种方式传递的信息被称作 `prop`。此时 `MyApp` 组件包含了 `count state` 以及 `handleClick` 事件处理函数，并将它们作为 `prop` 传递给 了每个按钮。
 
 最后，改变 `MyButton` 以 读取 从父组件传递来的 `prop`：
+
+```javascript
+function MyButton({ count, onClick }) {
+  return (
+    <button onClick={onClick}>
+      点了 {count} 次
+    </button>
+  );
+}
+```
