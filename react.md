@@ -73,3 +73,25 @@ export default function MyApp() {
 此刻，当你点击任何一个按钮时，`MyApp` 中的 `count` 都将改变，同时会改变 `MyButton` 中的两个 `count`。具体代码如下：
 
 首先，将 `MyButton` 的 `state` 上移到 `MyApp` 中：
+
+```javascript
+export default function MyApp() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>独立更新的计数器</h1>
+      <MyButton />
+      <MyButton />
+    </div>
+  );
+}
+
+function MyButton() {
+  // ... 我们正在从这里移动代码...
+}
+```
