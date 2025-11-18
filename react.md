@@ -68,4 +68,8 @@ export default function MyApp() {
 
 ## 组件间共享数据 
 在前面的示例中，每个 `MyButton` 都有自己独立的 `count`，当每个按钮被点击时，只有被点击按钮的 `count` 才会发生改变：
-![alt text](image.png)![alt text](image-1.png)
+
+
+此刻，当你点击任何一个按钮时，`MyApp` 中的 `count` 都将改变，同时会改变 `MyButton` 中的两个 `count`。具体代码如下：
+
+首先，将 `MyButton` 的 `state` 上移到 `MyApp` 中：
