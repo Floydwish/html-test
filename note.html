@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    head 标签：
+    * 放页面自身的信息
+    * 不显示在浏览器窗口内
+
+    <meta name="charset" content="UTF-8">
+    <meta charset="UTF-8"> 这是缩写
+    meta 标签：
+    * 特性：自闭合标签
+    * 作用：给程序看的（比如搜索引擎）
+    * 元信息：页面的额外信息
+    * 每一个 meta 标签可以表示一个页面的元信息
+
+    自闭合标签特性：
+    浏览器中的自闭合标签，在现代浏览器中，可以不用打闭合
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="小米手机">
+    
+
+
+    <title>我的首页</title>
+</head>
+<body>
+
+    <div id="top">这是顶部</div>
+    <a href="#bottom">跳到底部</a>
+
+    * 所有显示在页面内容中的东西
+    <a target="_blank" href="https://www.baidu.com">百度一下</a>
+    <a target="_self"  href="mailto:793809990@qq.com">联系我</a>
+    <a target="_bland" href="index.html">购买</a>
+    <a href="">当前文件</a>
+    <a href=".">当前文件夹</a>
+    <a target="_blank" href="index.html" download="index.html">下载页面</a>
+    注意：
+    * 属性的顺序没关系
+   
+    target 属性：
+    _self: 在原标签中打开（默认值）
+    _blank: 新建标签页标签
+    parent: 后面再说
+    top: ~
+
+    href 属性：
+    网页链接：如 "https://www.baidu.com"
+    邮箱：   如 "mailto:793809990@qq.com"
+    电话：   如 "tel:13888888888"
+    相对路径：如 "index.html"（跳转到同级目录下的另一文件）
+    空属性：  "" (链接到当前页面)
+    点属性：  "." (链接到当前文件夹)
+
+
+    <p>that's ok</p>
+    <img src="https://www.baidu.com/favicon.ico" alt="百度图片">
+
+    常用：
+    <h1>Marvin 的首页</h1>
+    <h2>Marvin 的首页</h2>
+    <h3>Marvin 的首页</h3>
+
+    不常用：
+    <h4>Marvin 的首页</h4>
+    <h5>Marvin 的首页</h5>
+    <h6>Marvin 的首页</h6>
+
+    <div>
+    加强：
+    <stong>hello</stong>
+    </div>
+
+    <div>
+    斜体(italic)
+    <i>hello</i>
+    </div>
+
+    <div>
+    下划线(underline)
+    <u>hello</u>
+    </div>
+
+    <div>
+    加粗(bold)
+    <b>hello</b>
+    </div>
+
+    <div>
+    强调(emphasize),通常斜体显示
+    <em>hellow</em>
+    </div>
+
+    注意：
+    * ul 与 li 成对出现（父子关系）
+    * ol 与 li 成对出现（父子关系）
+    unordered list:
+    <ul title="无序列表"> 列表1
+        <li tabindex="1"> list 1</li>
+        <li tabindex="2"> list 2</li>
+    </ul>
+
+    ordered list:
+    <ol title="有序列表">
+        <li> list 1</li>
+        <li>
+             list 2
+             <ul>
+                <li> list 2.1</li>
+                <li> list 2.2</li>
+             </ul>
+        </li>
+        <li> list 3</li>
+    </ol>
+
+
+    Description List / 定义列表
+    Definition Term / 定义术语
+    Definition Description / 定义描述
+    <dl> 
+    <dt>配料</dt>
+    <dd>辣椒</dd>
+    <dd>孜然</dd>
+
+    <dt>演员</dt>
+    <dd>张三</dd>
+    <dd>李四</dd>
+    </dl>
+
+    分隔线
+    <hr>
+
+    回车（源码中直接打回车没有效）
+    <br>
+    <br>
+    回车2
+
+    最常用的块标签：没有特俗意义
+    <div></div>
+    <span></span>
+
+
+    标签的通用属性: 基本上可以给到每个标签
+    * title="introduce", 鼠标悬浮时提示的内容
+    * tabindex="1" tab 设置焦点顺序（shift+tab:反向）；其他如链接默认为"0"
+    * class="red", 分类（后续的 CSS 处理）
+    * id="btn123", 唯一编码（精准定位）
+    * lang 设置这个标签内文字的语言（人类语言）
+    * style 设置标签样式（ css 属性）
+
+
+    a 标签页面内跳转：
+
+    <div id="bottom"></div>
+    <a href="#top">跳到顶部</a>
+
+
+    表单：
+    <form action="">
+        <button>提交</button>
+    </form>
+     
+
+</body>
+</html>
